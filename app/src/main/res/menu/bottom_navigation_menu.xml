@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_devices"
+        android:title=""
+        android:icon="@drawable/ic_devices_notchosen" />
+
+    <item
+        android:id="@+id/navigation_scenario"
+        android:title=""
+        android:icon="@drawable/ic_scenario_notchosen" />
+
+    <item
+        android:id="@+id/navigation_mine"
+        android:title=""
+        android:icon="@drawable/ic_mine_notchosen" />
+</menu>
