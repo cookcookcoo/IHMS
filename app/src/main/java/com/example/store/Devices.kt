@@ -1,13 +1,13 @@
 package com.example.store
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-
-
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -51,6 +51,14 @@ class Devices : Fragment() {
 
         SpacetextView.setOnClickListener{
             replaceContentFragment(SpaceFragment())
+        }
+
+        val ImageView = rootView.findViewById<ImageView>(R.id.imageView)
+        ImageView.setOnClickListener{
+            // 创建一个Intent并指定目标Activity
+            val intent = Intent(activity, AddDevices::class.java)
+            // 启动目标Activity
+            startActivity(intent)
         }
 
         return rootView
