@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.store.controlcenter.sampleCC
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -64,10 +68,23 @@ class DevicesFragment : Fragment() {
     }
 
     // 更新数据的方法
-    fun updateData(selectedOption: String, userInput: String) {
-        // 在这里处理从弹窗中得到的数据
-        // 例如，将数据打印到卡片上
-        val newData = "Selected Option: $selectedOption\nUser Input: $userInput"
-        cardTextView.text = newData
+//    fun updateData(selectedOption: String, userInput: String) {
+//        // 在这里处理从弹窗中得到的数据
+//        // 例如，将数据打印到卡片上
+//        val newData = "Selected Option: $selectedOption\nUser Input: $userInput"
+//        cardTextView.text = newData
+//    }
+
+    override fun onResume() {
+        super.onResume()
+        val deviceList = sampleCC.deviceList
+        val layoutManager = LinearLayoutManager(this.context)
+        val recycleView = view?.findViewById<RecyclerView>(R.id.recyclerView)
+        recycleView?.layoutManager = layoutManager
+        val adapter = DeviceAdapter(deviceList)
+        recycleView?.adapter = adapter
+
     }
+
+
 }
