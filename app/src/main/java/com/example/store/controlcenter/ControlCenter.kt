@@ -16,17 +16,15 @@ class ControlCenter(val user: User, val deviceList: ArrayList<Device>, val ruleL
 
     var deviceID = 20000 + 6
     fun addDevice(deviceType:String, deviceName:String):String {
-        lateinit var newDevice: Device
-        when (deviceType) {
-            "Light" -> newDevice = Light(deviceID, deviceName)
-            "Air Conditioner" -> newDevice = AirConditioner(deviceID, deviceName)
-            "Fridge" -> newDevice = Fridge(deviceID, deviceName)
-            "Television" -> newDevice = Television(deviceID, deviceName)
+        val newDevice: Device = when (deviceType) {
+            "Light" -> Light(deviceID, deviceName)
+            "Air Conditioner" -> AirConditioner(deviceID, deviceName)
+            "Fridge" -> Fridge(deviceID, deviceName)
+            "Television" -> Television(deviceID, deviceName)
+            else -> throw IllegalArgumentException("Unknown device type")
         }
         deviceList.add(newDevice)
         deviceID += 1
-        Log.d("CC", deviceList.size.toString())
-        Log.d("CC", deviceID.toString())
         return "Success."
     }
 

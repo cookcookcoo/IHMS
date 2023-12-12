@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.store.controlcenter.sampleCC
+import com.example.store.device.Light
 
 
 class AddDevices : AppCompatActivity() {
@@ -69,8 +70,10 @@ class AddDevices : AppCompatActivity() {
                 // 点击确定按钮的处理逻辑
                 val selectedOption = spinner.selectedItem.toString()
                 val userInput = editText.text.toString()
+//                val light = Light(20005, "SL")
                 // 在这里处理选择框和输入框的值
-                val msg = sampleCC.addDevice("Light", userInput)
+                val msg = sampleCC.addDevice(selectedOption, userInput)
+
                 Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
                 dialogInterface.dismiss() // 关闭弹窗
                 // 返回家居页面

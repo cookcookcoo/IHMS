@@ -24,7 +24,7 @@ open class Device(
         Timer().schedule(object: TimerTask(){
             override fun run() {
                 currentPower = random.nextInt(maxPower-minPower+1) + minPower
-                Log.d("Device", "$deviceID $name Power Changed, now is $currentPower .")
+//                Log.d("Device", "$deviceID $name Power Changed, now is $currentPower .")
             }
         }, Date(), 5000)
     }
