@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.store.controlcenter.sampleCC
@@ -78,7 +79,7 @@ class DevicesFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         val deviceList = sampleCC.deviceList
-        val layoutManager = LinearLayoutManager(this.context)
+        val layoutManager = GridLayoutManager(this.context, 2)
         val recycleView = view?.findViewById<RecyclerView>(R.id.recyclerView)
         recycleView?.layoutManager = layoutManager
         val adapter = DeviceAdapter(deviceList)
