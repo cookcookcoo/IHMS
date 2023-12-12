@@ -1,9 +1,15 @@
 package com.example.store.device
 
+import com.example.store.R
 import com.example.store.controlcenter.Operation
-import kotlin.math.max
 
-class AirConditioner(deviceID:Int, name:String, var temperature: Int = 26): Device(deviceID, name) {
+class AirConditioner(
+    deviceID: Int,
+    name: String,
+    imageID: Int = R.drawable.device_ac,
+    type:String = "AirConditioner",
+    var temperature: Int = 26
+) : Device(deviceID, name, imageID, type) {
 
     init {
         minPower = 100

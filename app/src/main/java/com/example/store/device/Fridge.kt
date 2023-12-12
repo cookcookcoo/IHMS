@@ -1,8 +1,15 @@
 package com.example.store.device
 
+import com.example.store.R
 import com.example.store.controlcenter.Operation
 
-class Fridge(deviceID: Int, name:String, var temperature:Int = 0) : Device(deviceID,name) {
+class Fridge(
+    deviceID: Int,
+    name: String,
+    imageID: Int = R.drawable.device_bedroomlight,
+    type: String = "Fridge",
+    var temperature: Int = 0
+) : Device(deviceID, name, imageID, type) {
 
 
     fun changeTemp(temp: Int) {
