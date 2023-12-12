@@ -8,43 +8,92 @@
     tools:context=".Mine">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- fragment_my.xml -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="411dp"
-            android:layout_height="218dp"
-            android:src="@drawable/mine1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="415dp"
-            android:layout_height="627dp"
-            android:src="@drawable/mine2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.673" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
+        <!-- 我的详情入口 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="416dp"
-            android:src="@drawable/mine3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:cardCornerRadius="8dp"
+            android:id="@+id/MyDetailsActivity"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我的详情"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- 实时功率图入口 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:id="@+id/RealTimePowerActivity"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="实时功率图"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- 用电建议入口 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:id="@+id/PowerAdviceActivity"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="用电建议"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- 健康咨询入口 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:id="@+id/HealthConsultationActivity"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="健康咨询"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- 论坛入口 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ForumActivity"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="论坛"
+                android:textSize="18sp"
+                android:padding="16dp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
 </FrameLayout>

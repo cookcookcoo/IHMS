@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Store"
         tools:targetApi="31">
         <activity
+            android:name=".ForumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HealthConsultationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PowerAdviceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RealTimePowerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddDevices"
             android:exported="false" />
         <activity
