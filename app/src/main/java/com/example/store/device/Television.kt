@@ -1,9 +1,16 @@
 package com.example.store.device
 
+import com.example.store.R
 import com.example.store.controlcenter.Operation
 
-class Television(deviceID: Int, name:String, var channel:Int = 1) : Device(deviceID,name) {
-    fun changeChannel(channel:Int) {
+class Television(
+    deviceID: Int,
+    name: String,
+    imageID: Int = R.drawable.device_tv,
+    type:String = "Television",
+    var channel: Int = 1
+) : Device(deviceID, name, imageID, type) {
+    fun changeChannel(channel: Int) {
         this.channel = channel
     }
 
