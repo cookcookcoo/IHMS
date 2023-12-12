@@ -30,8 +30,15 @@ class ControlCenter(val user: User, val deviceList: ArrayList<Device>, val ruleL
         return "Success."
     }
 
-    fun removeDevice() {
-
+    fun removeDevice(removeID:Int) {
+        for (device in deviceList) {
+            if (device.deviceID == removeID) {
+                deviceList.remove(device)
+                Log.d("CC", "$removeID remove success.")
+                return
+            }
+        }
+        Log.d("CC", "Failed to remove.")
     }
 
     fun addRule() {
@@ -58,12 +65,13 @@ class ControlCenter(val user: User, val deviceList: ArrayList<Device>, val ruleL
 
     }
 
-    fun getEnergyUsage(): String {
-        val stringBuffer = StringBuffer()
+    fun getPowerConsumption(): Int {
+        var powerConsumptionSum = 0
         for (device in deviceList) {
-//            stringBuffer.append(device.deviceID.toString() + device.name + device.energyUsage.toString() + "\n")
+            powerConsumptionSum += device.currentPower
         }
-        return stringBuffer.toString()
+        Log.d("CC", "The total power is $powerConsumptionSum")
+        return powerConsumptionSum
     }
 
     fun userHealthTracing() {

@@ -15,6 +15,12 @@ class DeviceAdapter(val deviceList:ArrayList<Device>):RecyclerView.Adapter<Recyc
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.device_item, parent,false)
+
+//        val displayMetrics = parent.context.resources.displayMetrics
+//        val screenWidth = displayMetrics.widthPixels
+//
+//        view.layoutParams = ViewGroup.LayoutParams(screenWidth / 2, ViewGroup.LayoutParams.WRAP_CONTENT)
+
         return ViewHolder(view)
     }
 

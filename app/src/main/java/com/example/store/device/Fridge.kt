@@ -3,6 +3,8 @@ package com.example.store.device
 import com.example.store.controlcenter.Operation
 
 class Fridge(deviceID: Int, name:String, var temperature:Int = 0) : Device(deviceID,name) {
+
+
     fun changeTemp(temp: Int) {
         this.temperature = temp
     }
