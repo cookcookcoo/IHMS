@@ -39,7 +39,7 @@ class Mine : Fragment() {
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_mine, container, false)
         //我的详情
-        val CardView1 = rootView.findViewById<CardView>(R.id.MyDetailsActivity)
+        val CardView1 = rootView.findViewById<ImageView>(R.id.imageView3)
         CardView1.setOnClickListener{
             // 创建一个Intent并指定目标Activity
             val intent = Intent(activity, MyDetailsActivity::class.java)
