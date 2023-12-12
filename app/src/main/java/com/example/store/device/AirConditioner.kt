@@ -2,7 +2,7 @@ package com.example.store.device
 
 import com.example.store.controlcenter.Operation
 
-class AirConditioner(deviceID:Int, name:String, var temperature: Int = 26): Device(deviceID) {
+class AirConditioner(deviceID:Int, name:String, var temperature: Int = 26): Device(deviceID, name) {
     fun changeTemp(temp: Int) {
         this.temperature = temp
     }

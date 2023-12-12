@@ -11,8 +11,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.store.controlcenter.sampleCC
 
 
 class AddDevices : AppCompatActivity() {
@@ -68,6 +70,8 @@ class AddDevices : AppCompatActivity() {
                 val selectedOption = spinner.selectedItem.toString()
                 val userInput = editText.text.toString()
                 // 在这里处理选择框和输入框的值
+                val msg = sampleCC.addDevice("Light", userInput)
+                Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
                 dialogInterface.dismiss() // 关闭弹窗
                 // 返回家居页面
                 val intent = Intent(this, MainActivity::class.java)
