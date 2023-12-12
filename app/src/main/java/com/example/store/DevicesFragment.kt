@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,12 +30,17 @@ class DevicesFragment : Fragment() {
         }
     }
 
+    private lateinit var cardTextView: TextView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.devices_frag, container, false)
+        val view = inflater.inflate(R.layout.devices_frag, container, false)
+
+        // 初始化TextView
+
+        return view
     }
 
     companion object {
@@ -55,5 +61,13 @@ class DevicesFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    // 更新数据的方法
+    fun updateData(selectedOption: String, userInput: String) {
+        // 在这里处理从弹窗中得到的数据
+        // 例如，将数据打印到卡片上
+        val newData = "Selected Option: $selectedOption\nUser Input: $userInput"
+        cardTextView.text = newData
     }
 }

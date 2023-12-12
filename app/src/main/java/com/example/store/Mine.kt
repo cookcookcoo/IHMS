@@ -1,10 +1,14 @@
 package com.example.store
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +37,48 @@ class Mine : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mine, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_mine, container, false)
+        //我的详情
+        val CardView1 = rootView.findViewById<CardView>(R.id.MyDetailsActivity)
+        CardView1.setOnClickListener{
+            // 创建一个Intent并指定目标Activity
+            val intent = Intent(activity, MyDetailsActivity::class.java)
+            // 启动目标Activity
+            startActivity(intent)
+        }
+        //实时功率图
+        val CardView2 = rootView.findViewById<CardView>(R.id.RealTimePowerActivity)
+        CardView1.setOnClickListener{
+            // 创建一个Intent并指定目标Activity
+            val intent = Intent(activity, MyDetailsActivity::class.java)
+            // 启动目标Activity
+            startActivity(intent)
+        }
+        //用电建议
+        val CardView3 = rootView.findViewById<CardView>(R.id.PowerAdviceActivity)
+        CardView1.setOnClickListener{
+            // 创建一个Intent并指定目标Activity
+            val intent = Intent(activity, MyDetailsActivity::class.java)
+            // 启动目标Activity
+            startActivity(intent)
+        }
+        //健康咨询
+        val CardView4 = rootView.findViewById<CardView>(R.id.HealthConsultationActivity)
+        CardView1.setOnClickListener{
+            // 创建一个Intent并指定目标Activity
+            val intent = Intent(activity, MyDetailsActivity::class.java)
+            // 启动目标Activity
+            startActivity(intent)
+        }
+        //论坛
+        val CardView5 = rootView.findViewById<CardView>(R.id.ForumActivity)
+        CardView1.setOnClickListener{
+            // 创建一个Intent并指定目标Activity
+            val intent = Intent(activity, MyDetailsActivity::class.java)
+            // 启动目标Activity
+            startActivity(intent)
+        }
+        return rootView
     }
 
     companion object {
@@ -56,4 +100,6 @@ class Mine : Fragment() {
                 }
             }
     }
+
+
 }
