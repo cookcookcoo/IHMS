@@ -7,25 +7,25 @@ class AirConditioner(
     deviceID: Int,
     name: String,
     imageID: Int = R.drawable.device_ac,
-    type:String = "AirConditioner",
-    var temperature: Int = 26
+    type: String = "AirConditioner",
 ) : Device(deviceID, name, imageID, type) {
+
+    var temperature: Int = 26
+    var windSpeed:Int = 0
+    var windDirection:Int = 0
 
     init {
         minPower = 100
         maxPower = 120
     }
 
-    fun changeTemp(temp: Int) {
-        this.temperature = temp
-    }
-
 
     override fun changeOperation(operation: Operation) {
+        super.changeOperation(operation)
         when (operation.operation) {
-            "turnOn" -> status = true
-            "turnOff" -> status = false
-            "changeTemp" -> changeTemp(operation.para)
+            "ChangeTemp" -> temperature = operation.para
+            "ChangeWindSpeed" -> windSpeed = operation.para
+            "ChangeWindDirection" -> windDirection = operation.para
         }
     }
 }

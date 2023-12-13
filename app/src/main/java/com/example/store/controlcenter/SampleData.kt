@@ -28,20 +28,25 @@ fun initDevice(deviceList: ArrayList<Device>) {
 }
 
 fun initOperation(operationList: ArrayList<Operation>) {
-    operationList.add(Operation(20001, "turnOn", 0))
-    operationList.add(Operation(20002, "turnOn", 0))
-    operationList.add(Operation(20003, "turnOn", 0))
-    operationList.add(Operation(20003, "changeTemp", 22))
+    operationList.add(Operation(20001, "TurnOn", 0))
+    operationList.add(Operation(20002, "TurnOn", 0))
+    operationList.add(Operation(20003, "TurnOn", 0))
+    operationList.add(Operation(20003, "ChangeTemp", 22))
+    operationList.add(Operation(20005, "ChangeChannel", 32))
 }
 
-fun initSampleCC() {
-    initDevice(sampleDeviceList)
-    initOperation(sampleOperationList)
-    sampleRuleList.apply {
+
+fun initRuleList(ruleList:ArrayList<Rule>) {
+    ruleList.apply {
         add(Rule(30001, "Sample Rule", sampleOperationList))
         add(Rule(30002, "Turn On", sampleOperationList))
         add(Rule(30003, "Turn Off", sampleOperationList))
     }
+}
+fun initSampleCC() {
+    initDevice(sampleDeviceList)
+    initOperation(sampleOperationList)
+    initRuleList(sampleRuleList)
     Log.d("CC", "initSampleCC")
 }
 
