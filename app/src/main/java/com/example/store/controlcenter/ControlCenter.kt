@@ -11,13 +11,17 @@ import com.example.store.device.Television
 import kotlin.math.log
 
 
-class ControlCenter(val user: User, val deviceList: ArrayList<Device>, val ruleList:ArrayList<Rule>) {
+class ControlCenter(
+    val user: User,
+    val deviceList: ArrayList<Device>,
+    val ruleList: ArrayList<Rule>
+) {
     init {
         initSampleCC()
     }
 
-    var deviceID = 20000 + 6
-    fun addDevice(deviceType:String, deviceName:String):String {
+    var deviceID = 20000 + 8
+    fun addDevice(deviceType: String, deviceName: String): String {
         val newDevice: Device = when (deviceType) {
             "Light" -> Light(deviceID, deviceName)
             "Air Conditioner" -> AirConditioner(deviceID, deviceName)
@@ -32,7 +36,8 @@ class ControlCenter(val user: User, val deviceList: ArrayList<Device>, val ruleL
         return "Success."
     }
 
-    fun removeDevice(removeID:Int) {
+
+    fun removeDevice(removeID: Int) {
         for (device in deviceList) {
             if (device.deviceID == removeID) {
                 deviceList.remove(device)
@@ -43,8 +48,8 @@ class ControlCenter(val user: User, val deviceList: ArrayList<Device>, val ruleL
         Log.d("CC", "Failed to remove.")
     }
 
-    fun addRule() {
-
+    fun addRule(rule: Rule) {
+        ruleList.add(rule)
     }
 
     fun executeRule(rule: Rule) {
@@ -53,7 +58,10 @@ class ControlCenter(val user: User, val deviceList: ArrayList<Device>, val ruleL
             for (device in deviceList) {
                 if (operation.deviceID == device.deviceID) {
                     device.changeOperation(operation)
-                    Log.d("app",operation.deviceID.toString() + operation.operation + operation.para.toString())
+                    Log.d(
+                        "app",
+                        operation.deviceID.toString() + operation.operation + operation.para.toString()
+                    )
                 }
             }
         }
