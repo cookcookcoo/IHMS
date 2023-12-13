@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.store.controlcenter.sampleCC
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,5 +58,16 @@ class Scenario : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        val sceneList = sampleCC.ruleList
+        val layoutManager = GridLayoutManager(this.context, 2)
+        val recyclerView = view?.findViewById<RecyclerView>(R.id.sceneRecycleView)
+        recyclerView?.layoutManager = layoutManager
+        val adapter = SceneAdapter(sceneList)
+        recyclerView?.adapter = adapter
     }
 }

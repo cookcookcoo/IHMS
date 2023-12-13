@@ -28,6 +28,27 @@ import com.example.store.device.Television
 
 class DeviceAdapter(private val deviceList: ArrayList<Device>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.device_item, parent, false)
+
+
+        return DeviceViewHolder(view)
+    }
+
+    override fun getItemCount() = deviceList.size
+
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+
+        val device = deviceList[position]
+
+        if (holder is DeviceViewHolder) {
+            holder.bind(device)
+        }
+    }
+
+
     inner class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val deviceName: TextView = itemView.findViewById(R.id.deviceName)
         private val deviceImage: ImageView = itemView.findViewById(R.id.deviceImage)
@@ -60,27 +81,6 @@ class DeviceAdapter(private val deviceList: ArrayList<Device>) :
             }
         }
     }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.device_item, parent, false)
-
-
-        return DeviceViewHolder(view)
-    }
-
-
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-
-        val device = deviceList[position]
-
-        if (holder is DeviceViewHolder) {
-            holder.bind(device)
-        }
-    }
-
-
-    override fun getItemCount() = deviceList.size
 
     private fun handleItemClick(context: Context, device: Device) {
 

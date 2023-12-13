@@ -1,4 +1,6 @@
 package com.example.store.controlcenter
 
-class Operation(val deviceID: Int, val operation: String, val para: Int) {
+import java.io.Serializable
+
+class Operation(val deviceID: Int, val operation: String, val para: Int):Serializable {
 }
