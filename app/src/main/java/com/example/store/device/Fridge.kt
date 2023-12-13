@@ -9,7 +9,9 @@ class Fridge(
     imageID: Int = R.drawable.device_bedroomlight,
     type: String = "Fridge"
 ) : Device(deviceID, name, imageID, type) {
-    var temperature: Int = 0
+
+    var upperTemperature: Int = 0
+    var lowerTemperature:Int = 0
 
 
 
@@ -18,7 +20,8 @@ class Fridge(
     override fun changeOperation(operation: Operation) {
         super.changeOperation(operation)
         when (operation.operation) {
-            "ChangeTemp" -> temperature = operation.para
+            "ChangeUpperTemp" -> upperTemperature = operation.para
+            "ChangeLowerTemp" -> lowerTemperature = operation.para
         }
     }
 }
