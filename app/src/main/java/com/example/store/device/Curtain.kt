@@ -8,4 +8,6 @@ class Curtain(
     imageID: Int = R.drawable.device_curtain,
     type:String = "Curtain",
 ) : Device(deviceID, name, imageID, type) {
+
+
 }

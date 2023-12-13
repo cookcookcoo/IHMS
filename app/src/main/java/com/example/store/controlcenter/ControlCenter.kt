@@ -18,6 +18,7 @@ class ControlCenter(
 ) {
     init {
         initSampleCC()
+//        executeRule(ruleList[0])
     }
 
     var deviceID = 20000 + 8
@@ -59,7 +60,7 @@ class ControlCenter(
                 if (operation.deviceID == device.deviceID) {
                     device.changeOperation(operation)
                     Log.d(
-                        "app",
+                        "CC",
                         operation.deviceID.toString() + operation.operation + operation.para.toString()
                     )
                 }

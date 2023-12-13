@@ -8,16 +8,15 @@ class Television(
     name: String,
     imageID: Int = R.drawable.device_tv,
     type:String = "Television",
-    var channel: Int = 1
 ) : Device(deviceID, name, imageID, type) {
-    fun changeChannel(channel: Int) {
-        this.channel = channel
-    }
+
+    var channel: Int = 1
+
 
     override fun changeOperation(operation: Operation) {
         super.changeOperation(operation)
         when (operation.operation) {
-            "ChangeChannel" -> changeChannel(operation.para)
+            "ChangeChannel" -> channel = operation.para
         }
     }
 }

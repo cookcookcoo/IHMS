@@ -35,6 +35,7 @@ class DeviceAdapter(private val deviceList: ArrayList<Device>) :
         fun bind(device: Device) {
             deviceName.text = device.name
             deviceImage.setImageResource(device.imageID)
+
             deviceSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
                 if (isChecked) {
                     device.changeOperation(Operation(device.deviceID, "turnOn", 0))

@@ -13,8 +13,9 @@ open class Device(
     var name: String = "",
     var imageID:Int = R.drawable.device_bedroomlight,
     var type:String = "Device",
-    var status: Boolean = false
 ):Serializable {
+
+    var status: Boolean = false
 
     var currentPower = 0
     var minPower = 0
@@ -27,12 +28,14 @@ open class Device(
                 currentPower = random.nextInt(maxPower-minPower+1) + minPower
 //                Log.d("Device", "$deviceID $name Power Changed, now is $currentPower .")
             }
-        }, Date(), 5000)
+        }, Date(), 3000)
     }
+
+
     open fun changeOperation(operation: Operation) {
         when (operation.operation) {
-            "turnOn" -> status = true
-            "turnOff" -> status = false
+            "TurnOn" -> status = true
+            "TurnOff" -> status = false
         }
     }
 
