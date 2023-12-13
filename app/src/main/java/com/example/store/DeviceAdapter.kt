@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.store.DeviceDetail.AirConditionerDetail
 import com.example.store.DeviceDetail.CurtainDetail
@@ -63,6 +64,7 @@ class DeviceAdapter(private val deviceList: ArrayList<Device>) :
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.device_item, parent, false)
 
+
         return DeviceViewHolder(view)
     }
 
@@ -80,6 +82,7 @@ class DeviceAdapter(private val deviceList: ArrayList<Device>) :
     override fun getItemCount() = deviceList.size
 
     private fun handleItemClick(context: Context, device: Device) {
+
 
         val intent = when (device) {
             is Light -> Intent(context, LightDetail::class.java)
