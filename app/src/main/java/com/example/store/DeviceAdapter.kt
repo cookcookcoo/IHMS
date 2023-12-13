@@ -10,10 +10,17 @@ import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.store.DeviceDetail.AirConditionerDetail
+import com.example.store.DeviceDetail.CurtainDetail
+import com.example.store.DeviceDetail.FanDetail
+import com.example.store.DeviceDetail.FridgeDetail
 import com.example.store.DeviceDetail.LightDetail
 import com.example.store.DeviceDetail.TelevisionDetail
 import com.example.store.controlcenter.Operation
+import com.example.store.device.AirConditioner
+import com.example.store.device.Curtain
 import com.example.store.device.Device
+import com.example.store.device.Fan
 import com.example.store.device.Fridge
 import com.example.store.device.Light
 import com.example.store.device.Television
@@ -73,11 +80,14 @@ class DeviceAdapter(private val deviceList: ArrayList<Device>) :
     override fun getItemCount() = deviceList.size
 
     private fun handleItemClick(context: Context, device: Device) {
-        // TODO: Need to add more detail device in when loop. Each corresponding to specific activities, need to create more detail activities.
 
         val intent = when (device) {
             is Light -> Intent(context, LightDetail::class.java)
             is Television -> Intent(context, TelevisionDetail::class.java)
+            is AirConditioner -> Intent(context, AirConditionerDetail::class.java)
+            is Curtain -> Intent(context, CurtainDetail::class.java)
+            is Fridge -> Intent(context, FridgeDetail::class.java)
+            is Fan -> Intent(context, FanDetail::class.java)
             else -> throw IllegalArgumentException("Unknown device type")
         }
 
