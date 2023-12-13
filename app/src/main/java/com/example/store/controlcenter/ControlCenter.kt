@@ -2,7 +2,9 @@ package com.example.store.controlcenter
 
 import android.util.Log
 import com.example.store.device.AirConditioner
+import com.example.store.device.Curtain
 import com.example.store.device.Device
+import com.example.store.device.Fan
 import com.example.store.device.Fridge
 import com.example.store.device.Light
 import com.example.store.device.Television
@@ -21,6 +23,8 @@ class ControlCenter(val user: User, val deviceList: ArrayList<Device>, val ruleL
             "Air Conditioner" -> AirConditioner(deviceID, deviceName)
             "Fridge" -> Fridge(deviceID, deviceName)
             "Television" -> Television(deviceID, deviceName)
+            "Curtain" -> Curtain(deviceID, deviceName)
+            "Fan" -> Fan(deviceID, deviceName)
             else -> throw IllegalArgumentException("Unknown device type")
         }
         deviceList.add(newDevice)

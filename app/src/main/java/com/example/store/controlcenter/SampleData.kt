@@ -2,7 +2,9 @@ package com.example.store.controlcenter
 
 import android.util.Log
 import com.example.store.device.AirConditioner
+import com.example.store.device.Curtain
 import com.example.store.device.Device
+import com.example.store.device.Fan
 import com.example.store.device.Fridge
 import com.example.store.device.Light
 import com.example.store.device.Television
@@ -20,6 +22,8 @@ fun initDevice(deviceList: ArrayList<Device>) {
         add(AirConditioner(20003, "Air1"))
         add(Fridge(20004, "Fridge1"))
         add(Television(20005, "TV1"))
+        add(Curtain(20006, "Curtain1"))
+        add(Fan(20007, "Fan1"))
     }
 }
 

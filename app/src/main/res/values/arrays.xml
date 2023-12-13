@@ -5,5 +5,7 @@
         <item>Air Conditioner</item>
         <item>Fridge</item>
         <item>Television</item>
+        <item>Curtain</item>
+        <item>Fan</item>
     </string-array>
 </resources>
