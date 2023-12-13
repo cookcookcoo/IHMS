@@ -24,9 +24,9 @@ class SceneDetail : AppCompatActivity() {
 
         val operationList = scene.operationList
         val layoutManager = LinearLayoutManager(this)
-        recyclerView?.layoutManager = layoutManager
+        recyclerView.layoutManager = layoutManager
         val adapter = OperationAdapter(operationList)
-        recyclerView?.adapter = adapter
+        recyclerView.adapter = adapter
 
     }
 

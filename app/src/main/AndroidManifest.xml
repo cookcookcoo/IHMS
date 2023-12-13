@@ -16,22 +16,22 @@
             android:name=".SceneDetail"
             android:exported="false" />
         <activity
-            android:name=".DeviceDetail.FridgeDetail"
+            android:name=".deviceDetail.FridgeDetail"
             android:exported="false" />
         <activity
-            android:name=".DeviceDetail.FanDetail"
+            android:name=".deviceDetail.FanDetail"
             android:exported="false" />
         <activity
-            android:name=".DeviceDetail.CurtainDetail"
+            android:name=".deviceDetail.CurtainDetail"
             android:exported="false" />
         <activity
-            android:name=".DeviceDetail.AirConditionerDetail"
+            android:name=".deviceDetail.AirConditionerDetail"
             android:exported="false" />
         <activity
-            android:name=".DeviceDetail.TelevisionDetail"
+            android:name=".deviceDetail.TelevisionDetail"
             android:exported="false" />
         <activity
-            android:name=".DeviceDetail.LightDetail"
+            android:name=".deviceDetail.LightDetail"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

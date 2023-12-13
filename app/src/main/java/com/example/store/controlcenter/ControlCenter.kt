@@ -54,18 +54,7 @@ class ControlCenter(
     }
 
     fun executeRule(rule: Rule) {
-        val operationList = rule.operationList
-        for (operation in operationList) {
-            for (device in deviceList) {
-                if (operation.deviceID == device.deviceID) {
-                    device.changeOperation(operation)
-                    Log.d(
-                        "CC",
-                        operation.deviceID.toString() + operation.operation + operation.para.toString()
-                    )
-                }
-            }
-        }
+        rule.execute()
     }
 
     fun removeRule() {

@@ -1,4 +1,4 @@
-package com.example.store.DeviceDetail
+package com.example.store.deviceDetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

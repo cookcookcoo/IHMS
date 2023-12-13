@@ -26,17 +26,22 @@ class OperationAdapter(private val operationList: ArrayList<Operation>) :
     }
 
     inner class OperationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val deviceImage:ImageView = itemView.findViewById(R.id.operationDeviceImage)
-        val operationDetail:TextView = itemView.findViewById(R.id.operationDetail)
+        private val deviceImage:ImageView = itemView.findViewById(R.id.operationDeviceImage)
+        private val operationDetail:TextView = itemView.findViewById(R.id.operationDetail)
 
         fun bind(operation: Operation) {
             val stringBuilder = StringBuilder()
             stringBuilder.apply {
-                append(operation.deviceID)
+                append(operation.device.deviceID)
+                append(operation.device.name)
                 append(operation.operation)
                 append(operation.para)
             }
+
+            deviceImage.setImageResource(operation.device.imageID)
             operationDetail.text = stringBuilder.toString()
+
+
         }
     }
 }

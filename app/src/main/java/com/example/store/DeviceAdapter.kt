@@ -9,14 +9,13 @@ import android.widget.ImageView
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.store.DeviceDetail.AirConditionerDetail
-import com.example.store.DeviceDetail.CurtainDetail
-import com.example.store.DeviceDetail.FanDetail
-import com.example.store.DeviceDetail.FridgeDetail
-import com.example.store.DeviceDetail.LightDetail
-import com.example.store.DeviceDetail.TelevisionDetail
+import com.example.store.deviceDetail.AirConditionerDetail
+import com.example.store.deviceDetail.CurtainDetail
+import com.example.store.deviceDetail.FanDetail
+import com.example.store.deviceDetail.FridgeDetail
+import com.example.store.deviceDetail.LightDetail
+import com.example.store.deviceDetail.TelevisionDetail
 import com.example.store.controlcenter.Operation
 import com.example.store.device.AirConditioner
 import com.example.store.device.Curtain
@@ -60,14 +59,14 @@ class DeviceAdapter(private val deviceList: ArrayList<Device>) :
 
             deviceSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
                 if (isChecked) {
-                    device.changeOperation(Operation(device.deviceID, "turnOn", 0))
+                    device.changeOperation(Operation(device, "turnOn", 0))
                     Toast.makeText(
                         buttonView.context,
                         "${device.deviceID} turnOn",
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
-                    device.changeOperation(Operation(device.deviceID, "turnOff", 0))
+                    device.changeOperation(Operation(device, "turnOff", 0))
                     Toast.makeText(
                         buttonView.context,
                         "${device.deviceID} turnOff",

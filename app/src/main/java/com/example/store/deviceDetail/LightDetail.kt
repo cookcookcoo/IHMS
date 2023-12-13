@@ -1,10 +1,9 @@
-package com.example.store.DeviceDetail
+package com.example.store.deviceDetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import com.example.store.R
 import com.example.store.controlcenter.Operation
@@ -31,7 +30,7 @@ class LightDetail : AppCompatActivity() {
         image.setImageResource(light.imageID)
         layout.title = light.name
         button.setOnClickListener {
-            light.changeOperation(Operation(light.deviceID, "turnOn", 0))
+            light.changeOperation(Operation(light, "turnOn", 0))
         }
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)

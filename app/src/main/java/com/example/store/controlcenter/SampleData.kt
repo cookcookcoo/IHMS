@@ -9,30 +9,40 @@ import com.example.store.device.Fridge
 import com.example.store.device.Light
 import com.example.store.device.Television
 
+val light1 = Light(20001, "light1")
+val light2 = Light(20002, "light2")
+val airConditioner = AirConditioner(20003, "Air1")
+val fridge = Fridge(20004, "Fridge1")
+val television = Television(20005, "TV1")
+val curtain = Curtain(20006, "Curtain1")
+val fan = Fan(20007, "Fan1")
+
+
 val sampleUser = User(10001, "sample user", "China")
 val sampleDeviceList = ArrayList<Device>()
 val sampleOperationList = ArrayList<Operation>()
 val sampleRuleList = ArrayList<Rule>()
 val sampleCC = ControlCenter(sampleUser, sampleDeviceList, sampleRuleList)
 
+
 fun initDevice(deviceList: ArrayList<Device>) {
     deviceList.apply {
-        add(Light(20001, "light1"))
-        add(Light(20002, "light2"))
-        add(AirConditioner(20003, "Air1"))
-        add(Fridge(20004, "Fridge1"))
-        add(Television(20005, "TV1"))
-        add(Curtain(20006, "Curtain1"))
-        add(Fan(20007, "Fan1"))
+        add(light1)
+        add(light2)
+        add(airConditioner)
+        add(fridge)
+        add(television)
+        add(curtain)
+        add(fan)
     }
 }
 
 fun initOperation(operationList: ArrayList<Operation>) {
-    operationList.add(Operation(20001, "TurnOn", 0))
-    operationList.add(Operation(20002, "TurnOn", 0))
-    operationList.add(Operation(20003, "TurnOn", 0))
-    operationList.add(Operation(20003, "ChangeTemp", 22))
-    operationList.add(Operation(20005, "ChangeChannel", 32))
+    operationList.add(Operation(light1, "TurnOn", 0))
+    operationList.add(Operation(light2, "TurnOn", 0))
+    operationList.add(Operation(airConditioner, "TurnOn", 0))
+    operationList.add(Operation(airConditioner, "ChangeTemp", 22))
+    operationList.add(Operation(television, "ChangeChannel", 32))
 }
 
 
