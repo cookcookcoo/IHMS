@@ -3,6 +3,7 @@ package com.example.store.device
 import android.util.Log
 import com.example.store.R
 import com.example.store.controlcenter.Operation
+import java.io.Serializable
 import java.util.Date
 import java.util.Timer
 import java.util.TimerTask
@@ -13,7 +14,7 @@ open class Device(
     var imageID:Int = R.drawable.device_bedroomlight,
     var type:String = "Device",
     var status: Boolean = false
-) {
+):Serializable {
 
     var currentPower = 0
     var minPower = 0
