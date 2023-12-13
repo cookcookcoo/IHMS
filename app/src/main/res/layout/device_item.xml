@@ -2,6 +2,7 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="120dp"
     android:layout_margin="5dp"
@@ -15,31 +16,42 @@
 
         <TextView
             android:id="@+id/deviceName"
+            android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:textSize="25sp"
             android:gravity="start|center_vertical"/>
 
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/deviceImage"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:scaleType="centerCrop"/>
+                app:layout_constraintDimensionRatio="1:1"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.093"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.486" />
 
             <Switch
                 android:id="@+id/deviceSwitch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-        </LinearLayout>
+                android:layout_width="49dp"
+                android:layout_height="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.721"
+                app:layout_constraintStart_toEndOf="@+id/deviceImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>
