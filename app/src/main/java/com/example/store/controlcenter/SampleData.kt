@@ -46,13 +46,14 @@ fun initOperation(operationList: ArrayList<Operation>) {
 }
 
 
-fun initRuleList(ruleList:ArrayList<Rule>) {
+fun initRuleList(ruleList: ArrayList<Rule>) {
     ruleList.apply {
         add(Rule(30001, "Sample Rule", sampleOperationList))
         add(Rule(30002, "Turn On", sampleOperationList))
         add(Rule(30003, "Turn Off", sampleOperationList))
     }
 }
+
 fun initSampleCC() {
     initDevice(sampleDeviceList)
     initOperation(sampleOperationList)
