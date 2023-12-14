@@ -17,8 +17,10 @@ class LightDetail : AppCompatActivity() {
         val light = intent.getSerializableExtra("device") as Light
 
         val image:ImageView = findViewById(R.id.LightDetailImage)
-        val button:Button = findViewById(R.id.LightDetailSwitch)
         val layout:CollapsingToolbarLayout = findViewById(R.id.LightDetailLayout)
+        val image2:ImageView = findViewById(R.id.imageView4)
+        val image3:ImageView = findViewById(R.id.imageView5)
+        val image4:ImageView = findViewById(R.id.imageView6)
         val detailContent = StringBuilder()
 
         detailContent.apply {
@@ -27,12 +29,19 @@ class LightDetail : AppCompatActivity() {
             append(light.currentPower)
         }
 
-        image.setImageResource(light.imageID)
+        image.setImageResource(R.drawable.devices_background)
         layout.title = light.name
-        button.setOnClickListener {
-            light.changeOperation(Operation(light, "turnOn", 0))
-        }
+//        button.setOnClickListener {
+//            light.changeOperation(Operation(light, "turnOn", 0))
+//        }
 
+
+        image2.setImageResource(R.drawable.ic_devices_notchosen)
+        image3.setImageResource(R.drawable.device_light)
+        image4.setImageResource(R.drawable.device_light)
+
+
+//        启用导航栏的返回键
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
