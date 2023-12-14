@@ -56,17 +56,18 @@ class DeviceAdapter(private val deviceList: ArrayList<Device>) :
         fun bind(device: Device) {
             deviceName.text = device.name
             deviceImage.setImageResource(device.imageID)
+            deviceSwitch.isChecked = device.status
 
             deviceSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
                 if (isChecked) {
-                    device.changeOperation(Operation(device, "turnOn", 0))
+                    Operation(device, "TurnOn", 0).run()
                     Toast.makeText(
                         buttonView.context,
                         "${device.deviceID} turnOn",
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
-                    device.changeOperation(Operation(device, "turnOff", 0))
+                    Operation(device, "TurnOff", 0).run()
                     Toast.makeText(
                         buttonView.context,
                         "${device.deviceID} turnOff",
