@@ -22,6 +22,7 @@ class ControlCenter(
     }
 
     var deviceID = 20000 + 8
+    var ruleID = 30000+4
     fun addDevice(deviceType: String, deviceName: String): String {
         val newDevice: Device = when (deviceType) {
             "Light" -> Light(deviceID, deviceName)
@@ -49,8 +50,10 @@ class ControlCenter(
         Log.d("CC", "Failed to remove.")
     }
 
-    fun addRule(rule: Rule) {
-        ruleList.add(rule)
+    fun addRule(name:String, operationList: ArrayList<Operation>) {
+        val newRule = Rule(ruleID, name, operationList)
+        ruleList.add(newRule)
+        ruleID += 1
     }
 
     fun executeRule(rule: Rule) {

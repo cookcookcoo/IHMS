@@ -16,6 +16,10 @@ open class Device(
 ):Serializable {
 
     var status: Boolean = false
+    var availableOperations = listOf<AvailableOperation>(
+        AvailableOperation("TurnOn", listOf("0")),
+        AvailableOperation("TurnOff", listOf("0"))
+    )
 
     var currentPower = 0
     var minPower = 0

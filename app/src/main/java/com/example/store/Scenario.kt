@@ -1,10 +1,12 @@
 package com.example.store
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.store.controlcenter.sampleCC
@@ -37,7 +39,15 @@ class Scenario : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_scenario, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_scenario, container, false)
+
+        val addSceneBtn = rootView.findViewById<ImageView>(R.id.addSceneBtn)
+
+        addSceneBtn.setOnClickListener {
+            val intent = Intent(this.context, AddScene::class.java)
+            startActivity(intent)
+        }
+        return rootView
     }
 
     companion object {
