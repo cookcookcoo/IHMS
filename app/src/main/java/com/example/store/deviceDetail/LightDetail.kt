@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.example.store.R
 import com.example.store.controlcenter.Operation
+import com.example.store.controlcenter.sampleCC
 import com.example.store.device.Light
 import com.google.android.material.appbar.CollapsingToolbarLayout
 
@@ -17,7 +18,8 @@ class LightDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_light_detail)
-        val light = intent.getSerializableExtra("device") as Light
+        val lightID = intent.getSerializableExtra("deviceID") as Int
+        val light = sampleCC.getDevice(lightID) as Light
 
         val image:ImageView = findViewById(R.id.LightDetailImage)
         val layout:CollapsingToolbarLayout = findViewById(R.id.LightDetailLayout)

@@ -95,7 +95,7 @@ class DeviceAdapter(private val deviceList: ArrayList<Device>) :
             else -> throw IllegalArgumentException("Unknown device type")
         }
 
-        intent.putExtra("device", device)
+        intent.putExtra("deviceID", device.deviceID)
         context.startActivity(intent)
     }
 

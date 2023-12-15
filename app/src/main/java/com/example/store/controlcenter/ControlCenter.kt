@@ -50,6 +50,15 @@ class ControlCenter(
         Log.d("CC", "Failed to remove.")
     }
 
+    fun getDevice(getID:Int) :Device{
+        for (device in deviceList) {
+            if (device.deviceID == getID) {
+                return device
+            }
+        }
+        return Device(20000, "False Device")
+    }
+
     fun addRule(name:String, operationList: ArrayList<Operation>) {
         val newRule = Rule(ruleID, name, operationList)
         ruleList.add(newRule)
