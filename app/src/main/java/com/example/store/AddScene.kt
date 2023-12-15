@@ -9,13 +9,19 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.store.controlcenter.Operation
 import com.example.store.controlcenter.sampleCC
 import com.example.store.device.Device
+import com.google.android.material.textfield.TextInputEditText
 
 class AddScene : AppCompatActivity() {
     private val operationList = ArrayList<Operation>()
     private val deviceList = sampleCC.deviceList
+    private val adapter = OperationAdapter(operationList)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +29,7 @@ class AddScene : AppCompatActivity() {
 
         val addScene = findViewById<Button>(R.id.addScene)
         val confirmScene = findViewById<Button>(R.id.confirmScene)
+        val newSceneName = findViewById<TextInputEditText>(R.id.newSceneName)
 
         addScene.setOnClickListener {
             showDeviceSelectionDialog()
@@ -31,7 +38,7 @@ class AddScene : AppCompatActivity() {
 
         //confirm键
         confirmScene.setOnClickListener {
-            sampleCC.addRule("New Scene", operationList)
+            sampleCC.addRule(newSceneName.text.toString(), operationList)
             finish()
         }
 
@@ -42,6 +49,14 @@ class AddScene : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val addingSceneRecyclerView = findViewById<RecyclerView>(R.id.addingSceneRecycleView)
+        val layoutManager = LinearLayoutManager(this)
+        addingSceneRecyclerView.layoutManager = layoutManager
+        addingSceneRecyclerView.adapter = adapter
     }
 
     private fun showDeviceSelectionDialog() {
@@ -67,17 +82,11 @@ class AddScene : AppCompatActivity() {
             // ...
 
             val newOperation = Operation(device, selectedOperation.name, 0)
-            addSelectedItemView(newOperation) // 将选择结果添加到界面中
             operationList.add(newOperation) // 将选择结果添加到 OperationList 中
+            adapter.notifyDataSetChanged()
         }
         builder.show()
     }
 
-    private fun addSelectedItemView(operation: Operation) {
-        val textView = TextView(this)
-        textView.text = "${operation.operation} ${operation.para}"
-        val selectedItemsLayout: LinearLayout = findViewById<LinearLayout>(R.id.selectedItemsLayout)
-        selectedItemsLayout.addView(textView) // 将选择结果添加到界面的 LinearLayout 中显示
-    }
 
 }

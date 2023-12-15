@@ -40,7 +40,7 @@
         android:layout_width="234dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
-        android:hint="input scnene name"
+        android:hint="input scene name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,22 +62,11 @@
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
-        android:textColor="@color/white"
         android:text="Confirm"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addScene" />
-
-    <LinearLayout
-        android:id="@+id/selectedItemsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addScene">
-        <!-- 这里会动态添加用户选择的操作条目 -->
-    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -89,5 +78,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/zuojiantou" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addingSceneRecycleView"
+        android:layout_width="409dp"
+        android:layout_height="399dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmScene" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,7 +37,7 @@ class SceneAdapter(private val sceneList: ArrayList<Rule>) :
 
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, SceneDetail::class.java)
-                intent.putExtra("scene", rule)
+                intent.putExtra("sceneID", rule.ruleID)
                 itemView.context.startActivity(intent)
             }
 

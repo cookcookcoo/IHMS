@@ -3,6 +3,7 @@ package com.example.store
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -28,18 +29,17 @@ class OperationAdapter(private val operationList: ArrayList<Operation>) :
     inner class OperationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val deviceImage:ImageView = itemView.findViewById(R.id.operationDeviceImage)
         private val operationDetail:TextView = itemView.findViewById(R.id.operationDetail)
-
+        private val operationDelete:Button = itemView.findViewById(R.id.operationDelete)
         fun bind(operation: Operation) {
-            val stringBuilder = StringBuilder()
-            stringBuilder.apply {
-                append(operation.device.deviceID)
-                append(operation.device.name)
-                append(operation.operation)
-                append(operation.para)
-            }
+            val stringBuilder = StringBuilder("Device: ${operation.device.name} ${operation.operation}")
+
 
             deviceImage.setImageResource(operation.device.imageID)
             operationDetail.text = stringBuilder.toString()
+            operationDelete.setOnClickListener {
+                operationList.remove(operation)
+                notifyDataSetChanged()
+            }
 
 
         }

@@ -69,8 +69,18 @@ class ControlCenter(
         rule.execute()
     }
 
+
     fun removeRule() {
 
+    }
+
+    fun getRule(getID: Int):Rule {
+        for (rule in ruleList) {
+            if (getID == rule.ruleID) {
+                return rule
+            }
+        }
+        return Rule(30000, "False Rule", ArrayList<Operation>())
     }
 
     fun getEnergyUsing() {

@@ -17,7 +17,8 @@ class SceneDetail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scene_detail)
 
-        val scene = intent.getSerializableExtra("scene") as Rule
+        val sceneID = intent.getSerializableExtra("sceneID") as Int
+        val scene = sampleCC.getRule(sceneID) as Rule
 
         val recyclerView:RecyclerView = findViewById(R.id.sceneDetailRecycleView)
         val name:TextView = findViewById(R.id.sceneDetailName)
@@ -34,15 +35,10 @@ class SceneDetail : AppCompatActivity() {
         //返回键
         val backButton = findViewById<ImageView>(R.id.imageView8)
         backButton.setOnClickListener {
-            // 创建一个Intent并指定目标Activity
-            val intent = Intent(this, MainActivity::class.java)
-
-            // 添加额外的信息，例如标识要显示的 Fragment
-            intent.putExtra("fragmentToLoad", "sceneFragment")
-
-            // 启动目标Activity
-            startActivity(intent)
+            finish()
         }
+
+
 
     }
 
