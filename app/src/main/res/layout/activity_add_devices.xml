@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EAEAEA"
     tools:context=".AddDevices">
 
     <TextView
@@ -22,12 +21,11 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="342dp"
-        android:layout_height="105dp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
         android:text="Scan Code"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
-        android:background="@drawable/button_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -37,10 +35,9 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="342dp"
-        android:layout_height="105dp"
-        android:background="@drawable/button_style"
-        android:text="Manual Addition"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Manual"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
