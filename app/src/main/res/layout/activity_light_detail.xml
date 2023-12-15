@@ -88,7 +88,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Switch
-                        android:id="@+id/switch3"
+                        android:id="@+id/lightDetailSwitch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -127,7 +127,7 @@
                         app:layout_constraintVertical_bias="0.466" />
 
                     <SeekBar
-                        android:id="@+id/seekBar2"
+                        android:id="@+id/lightDetailLuminance"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"

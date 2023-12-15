@@ -17,11 +17,11 @@ class Fridge(
 
 
 
-    override fun changeOperation(operation: Operation) {
-        super.changeOperation(operation)
-        when (operation.operation) {
-            "ChangeUpperTemp" -> upperTemperature = operation.para
-            "ChangeLowerTemp" -> lowerTemperature = operation.para
+    override fun changeOperation(operation: String, para:Int) {
+        super.changeOperation(operation,para)
+        when (operation) {
+            "ChangeUpperTemp" -> upperTemperature = para
+            "ChangeLowerTemp" -> lowerTemperature = para
         }
     }
 }

@@ -20,12 +20,12 @@ class AirConditioner(
     }
 
 
-    override fun changeOperation(operation: Operation) {
-        super.changeOperation(operation)
-        when (operation.operation) {
-            "ChangeTemp" -> temperature = operation.para
-            "ChangeWindSpeed" -> windSpeed = operation.para
-            "ChangeWindDirection" -> windDirection = operation.para
+    override fun changeOperation(operation:String, para:Int) {
+        super.changeOperation(operation,para)
+        when (operation) {
+            "ChangeTemp" -> temperature = para
+            "ChangeWindSpeed" -> windSpeed = para
+            "ChangeWindDirection" -> windDirection = para
         }
     }
 }

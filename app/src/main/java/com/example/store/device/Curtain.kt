@@ -12,10 +12,10 @@ class Curtain(
 
     var openingRate:Int = 0
 
-    override fun changeOperation(operation: Operation) {
-        super.changeOperation(operation)
-        when (operation.operation) {
-            "ChangeOpeningRate" -> openingRate = operation.para
+    override fun changeOperation(operation: String, para:Int) {
+        super.changeOperation(operation,para)
+        when (operation) {
+            "ChangeOpeningRate" -> openingRate = para
         }
     }
 

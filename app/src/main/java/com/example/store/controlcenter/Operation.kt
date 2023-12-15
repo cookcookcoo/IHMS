@@ -7,7 +7,7 @@ import java.io.Serializable
 class Operation(val device: Device, val operation: String, val para: Int):Serializable {
 
     fun run() {
-        device.changeOperation(this)
-        Log.d("Device", device.status.toString())
+        device.changeOperation(operation, para)
+//        Log.d("Device", device.status.toString())
     }
 }

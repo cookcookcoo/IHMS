@@ -13,12 +13,12 @@ class Fan(
     var rotate:Int = 0
     var windSpeed:Int = 0
 
-    override fun changeOperation(operation: Operation) {
-        super.changeOperation(operation)
-        when (operation.operation) {
+    override fun changeOperation(operation: String, para:Int) {
+        super.changeOperation(operation,para)
+        when (operation) {
             "Rotate" -> rotate = 1
             "Stop" -> rotate = 0
-            "ChangeWindSpeed" -> windSpeed = operation.para
+            "ChangeWindSpeed" -> windSpeed = para
         }
     }
 }

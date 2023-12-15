@@ -36,8 +36,8 @@ open class Device(
     }
 
 
-    open fun changeOperation(operation: Operation) {
-        when (operation.operation) {
+    open fun changeOperation(operation:String, para:Int) {
+        when (operation) {
             "TurnOn" -> status = true
             "TurnOff" -> status = false
         }

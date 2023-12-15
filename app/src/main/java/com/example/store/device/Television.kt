@@ -14,11 +14,11 @@ class Television(
     var volume:Int = 0
 
 
-    override fun changeOperation(operation: Operation) {
-        super.changeOperation(operation)
-        when (operation.operation) {
-            "ChangeChannel" -> channel = operation.para
-            "ChangeVolume" -> volume = operation.para
+    override fun changeOperation(operation: String, para:Int) {
+        super.changeOperation(operation,para)
+        when (operation) {
+            "ChangeChannel" -> channel = para
+            "ChangeVolume" -> volume = para
         }
     }
 }
