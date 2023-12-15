@@ -48,33 +48,33 @@ class Mine : Fragment() {
         }
         //实时功率图
         val CardView2 = rootView.findViewById<CardView>(R.id.RealTimePowerActivity)
-        CardView1.setOnClickListener{
+        CardView2.setOnClickListener{
             // 创建一个Intent并指定目标Activity
-            val intent = Intent(activity, MyDetailsActivity::class.java)
+            val intent = Intent(activity, RealTimePowerActivity::class.java)
             // 启动目标Activity
             startActivity(intent)
         }
         //用电建议
         val CardView3 = rootView.findViewById<CardView>(R.id.PowerAdviceActivity)
-        CardView1.setOnClickListener{
+        CardView3.setOnClickListener{
             // 创建一个Intent并指定目标Activity
-            val intent = Intent(activity, MyDetailsActivity::class.java)
+            val intent = Intent(activity, PowerAdviceActivity::class.java)
             // 启动目标Activity
             startActivity(intent)
         }
         //健康咨询
         val CardView4 = rootView.findViewById<CardView>(R.id.HealthConsultationActivity)
-        CardView1.setOnClickListener{
+        CardView4.setOnClickListener{
             // 创建一个Intent并指定目标Activity
-            val intent = Intent(activity, MyDetailsActivity::class.java)
+            val intent = Intent(activity, HealthConsultationActivity::class.java)
             // 启动目标Activity
             startActivity(intent)
         }
         //论坛
         val CardView5 = rootView.findViewById<CardView>(R.id.ForumActivity)
-        CardView1.setOnClickListener{
+        CardView5.setOnClickListener{
             // 创建一个Intent并指定目标Activity
-            val intent = Intent(activity, MyDetailsActivity::class.java)
+            val intent = Intent(activity, ForumActivity::class.java)
             // 启动目标Activity
             startActivity(intent)
         }
