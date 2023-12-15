@@ -16,7 +16,7 @@ open class Device(
 ):Serializable {
 
     var status: Boolean = false
-    var availableOperations = listOf<AvailableOperation>(
+    var availableOperations = mutableListOf<AvailableOperation>(
         AvailableOperation("TurnOn", listOf("0")),
         AvailableOperation("TurnOff", listOf("0"))
     )
