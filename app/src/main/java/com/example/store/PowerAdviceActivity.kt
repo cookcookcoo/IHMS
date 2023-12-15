@@ -11,6 +11,5 @@ class PowerAdviceActivity : AppCompatActivity() {
         supportActionBar?.hide()
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         setContentView(R.layout.activity_power_advice)
-        sampleCC.getPowerConsumption()
     }
 }
