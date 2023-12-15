@@ -13,6 +13,12 @@ class Light(
 
         var luminance = 0
 
+    init {
+        availableOperations.add(
+            AvailableOperation("ChangeLuminance", listOf("1","2","3","4","5"))
+        )
+    }
+
     override fun changeOperation(operation: Operation) {
         super.changeOperation(operation)
         when (operation.operation) {
