@@ -15,15 +15,6 @@ class Light(
 ) :
     Device(deviceID, name, imageID, type) {
 
-    init {
-        val random = java.util.Random()
-        Timer().schedule(object: TimerTask(){
-            override fun run() {
-                Log.d("$name", "$name, $status, $luminance")
-            }
-        }, Date(), 300)
-    }
-
     var luminance = 0
 
     init {
