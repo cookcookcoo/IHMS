@@ -28,10 +28,7 @@ class AddDevices : AppCompatActivity() {
         //返回箭头
         val ImageView = findViewById<ImageView>(R.id.imageView7)
         ImageView.setOnClickListener{
-            // 创建一个Intent并指定目标Activity
-            val intent = Intent(this, MainActivity::class.java)
-            // 启动目标Activity
-            startActivity(intent)
+            finish()
         }
 
         //manual addition

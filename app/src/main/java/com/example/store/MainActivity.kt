@@ -47,6 +47,13 @@ class MainActivity : AppCompatActivity() {
 
         // 默认显示Home Fragment
                 switchFragment(Devices())
+
+        // 检查是否有额外的信息
+        val fragmentToLoad = intent.getStringExtra("fragmentToLoad")
+        if (fragmentToLoad == "sceneFragment") {
+            // 加载 Scene Fragment
+            switchFragment(Scenario())
+        }
     }
 
     private fun switchFragment(fragment: Fragment) {

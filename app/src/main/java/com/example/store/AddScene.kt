@@ -1,9 +1,11 @@
 package com.example.store
 
+import android.content.Intent
 import android.graphics.Path.Op
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -26,9 +28,19 @@ class AddScene : AppCompatActivity() {
             showDeviceSelectionDialog()
         }
 
+
+        //confirm键
         confirmScene.setOnClickListener {
             sampleCC.addRule("New Scene", operationList)
+            finish()
         }
+
+        //返回键
+        val backButton = findViewById<ImageView>(R.id.imageView2)
+        backButton.setOnClickListener {
+            finish()
+        }
+
 
     }
 

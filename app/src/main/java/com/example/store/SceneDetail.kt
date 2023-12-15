@@ -1,7 +1,9 @@
 package com.example.store
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,6 +29,20 @@ class SceneDetail : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
         val adapter = OperationAdapter(operationList)
         recyclerView.adapter = adapter
+
+
+        //返回键
+        val backButton = findViewById<ImageView>(R.id.imageView8)
+        backButton.setOnClickListener {
+            // 创建一个Intent并指定目标Activity
+            val intent = Intent(this, MainActivity::class.java)
+
+            // 添加额外的信息，例如标识要显示的 Fragment
+            intent.putExtra("fragmentToLoad", "sceneFragment")
+
+            // 启动目标Activity
+            startActivity(intent)
+        }
 
     }
 
