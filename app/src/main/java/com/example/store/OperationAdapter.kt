@@ -13,7 +13,8 @@ class OperationAdapter(private val operationList: ArrayList<Operation>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.operation_item, parent, false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.operation_item, parent, false)
         return OperationViewHolder(view)
     }
 
@@ -27,11 +28,12 @@ class OperationAdapter(private val operationList: ArrayList<Operation>) :
     }
 
     inner class OperationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val deviceImage:ImageView = itemView.findViewById(R.id.operationDeviceImage)
-        private val operationDetail:TextView = itemView.findViewById(R.id.operationDetail)
-        private val operationDelete:Button = itemView.findViewById(R.id.operationDelete)
+        private val deviceImage: ImageView = itemView.findViewById(R.id.operationDeviceImage)
+        private val operationDetail: TextView = itemView.findViewById(R.id.operationDetail)
+        private val operationDelete: Button = itemView.findViewById(R.id.operationDelete)
         fun bind(operation: Operation) {
-            val stringBuilder = StringBuilder("Device: ${operation.device.name} ${operation.operation}")
+            val stringBuilder =
+                StringBuilder("Device: ${operation.device.name} ${operation.operation} to ${operation.para}")
 
 
             deviceImage.setImageResource(operation.device.imageID)

@@ -12,6 +12,12 @@ class Curtain(
 
     var openingRate: Int = 0
 
+    init {
+        availableOperations.apply {
+            add(AvailableOperation("ChangeOpeningRate", listOf(1, 2, 3, 4, 5)))
+        }
+    }
+
     override fun changeOperation(operation: String, para: Int) {
         when (operation) {
             "TurnOn" -> status = true

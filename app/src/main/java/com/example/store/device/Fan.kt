@@ -13,6 +13,14 @@ class Fan(
     var rotate: Int = 0
     var windSpeed: Int = 0
 
+    init {
+        availableOperations.apply {
+            add(AvailableOperation("Rotate", listOf(0)))
+            add(AvailableOperation("Stop", listOf(0)))
+            add(AvailableOperation("ChangeWindSpeed", listOf(1,2,3,4,5)))
+        }
+    }
+
     override fun changeOperation(operation: String, para: Int) {
         when (operation) {
             "TurnOn" -> {

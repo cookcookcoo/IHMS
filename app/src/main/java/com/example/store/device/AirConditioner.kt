@@ -12,9 +12,19 @@ class AirConditioner(
 
     var temperature: Int = 26
     var windSpeed: Int = 0
-    var windDirection: Int = 0
+    var fanRotate: Int = 0
 
     init {
+        availableOperations.apply {
+            add(
+                AvailableOperation(
+                    "ChangeTemp",
+                    listOf(20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30)
+                )
+            )
+            add(AvailableOperation("ChangeWindSpeed", listOf(1, 2, 3)))
+            add(AvailableOperation("ChangeFanRotate", listOf(0, 1)))
+        }
 
     }
 
@@ -35,7 +45,7 @@ class AirConditioner(
 
             "ChangeTemp" -> temperature = para
             "ChangeWindSpeed" -> windSpeed = para
-            "ChangeWindDirection" -> windDirection = para
+            "ChangeFanRotate" -> fanRotate = para
         }
     }
 }
