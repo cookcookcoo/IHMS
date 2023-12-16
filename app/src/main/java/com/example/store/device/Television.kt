@@ -1,7 +1,6 @@
 package com.example.store.device
 
 import com.example.store.R
-import com.example.store.controlcenter.Operation
 
 class Television(
     deviceID: Int,
@@ -16,7 +15,7 @@ class Television(
     init {
         availableOperations.apply {
             add(AvailableOperation("ChangeChannel", listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)))
-            add(AvailableOperation("ChangeVolume", listOf(1, 2, 3, 4, 5)))
+            add(AvailableOperation("ChangeVolume", listOf(0, 1, 2, 3, 4, 5)))
         }
     }
 

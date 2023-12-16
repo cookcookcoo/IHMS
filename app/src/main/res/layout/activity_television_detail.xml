@@ -15,7 +15,7 @@
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/LightDetailLayout"
+            android:id="@+id/tvDetailLayout"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
@@ -89,7 +89,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Switch
-                        android:id="@+id/lightDetailSwitch"
+                        android:id="@+id/tvDetailSwitch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -130,7 +130,7 @@
                         app:layout_constraintVertical_bias="0.466" />
 
                     <SeekBar
-                        android:id="@+id/volumeAdjust"
+                        android:id="@+id/tvVolume"
                         android:layout_width="218dp"
                         android:layout_height="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -169,7 +169,7 @@
                         app:layout_constraintVertical_bias="0.508" />
 
                     <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/tvChangeChannel"
                         android:layout_width="64dp"
                         android:layout_height="42dp"
                         android:layout_marginEnd="44dp"
@@ -182,13 +182,13 @@
                         app:layout_constraintVertical_bias="0.526" />
 
                     <TextView
-                        android:id="@+id/textView23"
+                        android:id="@+id/tvChannelText"
                         android:layout_width="34dp"
                         android:layout_height="21dp"
                         android:layout_marginEnd="92dp"
                         android:text="NO."
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/button5"
+                        app:layout_constraintEnd_toEndOf="@+id/tvChangeChannel"
                         app:layout_constraintHorizontal_bias="0.8"
                         app:layout_constraintStart_toEndOf="@+id/textView21"
                         app:layout_constraintTop_toTopOf="parent"
