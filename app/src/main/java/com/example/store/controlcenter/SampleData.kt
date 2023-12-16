@@ -8,6 +8,7 @@ import com.example.store.device.Fan
 import com.example.store.device.Fridge
 import com.example.store.device.Light
 import com.example.store.device.Television
+import com.example.store.forum.Post
 
 val light1 = Light(20001, "light1")
 val light2 = Light(20002, "light2")
@@ -18,14 +19,15 @@ val curtain = Curtain(20006, "Curtain1")
 val fan = Fan(20007, "Fan1")
 
 
+
 val sampleUser = User(10001, "sample user", "China")
 val sampleDeviceList = ArrayList<Device>()
 val sampleOperationList1 = ArrayList<Operation>()
 val sampleOperationList2 = ArrayList<Operation>()
 val sampleOperationList3 = ArrayList<Operation>()
 val sampleRuleList = ArrayList<Rule>()
-val sampleCC = ControlCenter(sampleUser, sampleDeviceList, sampleRuleList)
 
+val sampleCC = ControlCenter(sampleUser, sampleDeviceList, sampleRuleList)
 
 fun initDevice(deviceList: ArrayList<Device>) {
     deviceList.apply {
@@ -77,6 +79,14 @@ fun initRuleList(ruleList: ArrayList<Rule>) {
         add(Rule(30001, "Sample Rule", sampleOperationList1))
         add(Rule(30002, "Turn On", sampleOperationList2))
         add(Rule(30003, "Turn Off", sampleOperationList3))
+    }
+}
+
+fun initPostList() {
+    Post.apply {
+        addPost("Post1", "Testing Post")
+        addPost("Post2", "Testing Post")
+        addPost("Post3", "Testing Post")
     }
 }
 

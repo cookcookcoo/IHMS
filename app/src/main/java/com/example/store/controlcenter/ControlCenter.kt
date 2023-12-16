@@ -18,7 +18,7 @@ class ControlCenter(
 ) {
     init {
         initSampleCC()
-//        executeRule(ruleList[0])
+        initPostList()
     }
 
     var deviceID = 20000 + 8

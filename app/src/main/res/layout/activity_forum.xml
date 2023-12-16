@@ -42,6 +42,7 @@
         app:srcCompat="@drawable/plus_black" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/forumRecycleView"
         android:layout_width="409dp"
         android:layout_height="620dp"
         app:layout_constraintEnd_toEndOf="parent"

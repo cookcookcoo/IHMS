@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Store"
         tools:targetApi="31">
         <activity
+            android:name=".PostDetail"
+            android:exported="false" />
+        <activity
             android:name=".AddPost"
             android:exported="false" />
         <activity

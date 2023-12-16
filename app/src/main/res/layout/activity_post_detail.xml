@@ -18,12 +18,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/addingPostTitle"
+    <TextView
+        android:id="@+id/postDetailTitle"
         android:layout_width="231dp"
         android:layout_height="55dp"
         android:layout_marginTop="24dp"
-        android:hint="Title Here"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toEndOf="@+id/textView19"
@@ -41,16 +40,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
-    <EditText
-        android:id="@+id/addingPostContent"
+    <TextView
+        android:id="@+id/postDetailContent"
         android:layout_width="327dp"
         android:layout_height="479dp"
         android:layout_margin="16dp"
         android:layout_marginTop="12dp"
         android:gravity="start|top"
-        android:hint="  输入文章内容"
         android:background="@drawable/edit_text_border"
-        android:inputType="textMultiLine"
         android:minLines="10"
         android:scrollbars="vertical"
         android:textSize="16sp"
@@ -61,27 +58,15 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/postDetailBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:text="Cancel"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addingPostContent"
-        app:layout_constraintVertical_bias="0.361" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:text="Confirm"
+        android:text="Back"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addingPostContent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postDetailContent"
         app:layout_constraintVertical_bias="0.361" />
 
 
