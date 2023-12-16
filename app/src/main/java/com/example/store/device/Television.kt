@@ -11,12 +11,23 @@ class Television(
 ) : Device(deviceID, name, imageID, type) {
 
     var channel: Int = 1
-    var volume:Int = 0
+    var volume: Int = 0
 
 
-    override fun changeOperation(operation: String, para:Int) {
-        super.changeOperation(operation,para)
+    override fun changeOperation(operation: String, para: Int) {
         when (operation) {
+            "TurnOn" -> {
+                status = true
+                minPower = 60
+                maxPower = 70
+            }
+
+            "TurnOff" -> {
+                status = false
+                minPower = 0
+                maxPower = 0
+            }
+
             "ChangeChannel" -> channel = para
             "ChangeVolume" -> volume = para
         }

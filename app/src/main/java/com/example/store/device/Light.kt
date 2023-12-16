@@ -19,13 +19,24 @@ class Light(
 
     init {
         availableOperations.add(
-            AvailableOperation("ChangeLuminance", listOf("1","2","3","4","5"))
+            AvailableOperation("ChangeLuminance", listOf("1", "2", "3", "4", "5"))
         )
     }
 
-    override fun changeOperation(operation: String, para:Int) {
-        super.changeOperation(operation,para)
+    override fun changeOperation(operation: String, para: Int) {
         when (operation) {
+            "TurnOn" -> {
+                status = true
+                minPower = 5
+                maxPower = 8
+            }
+
+            "TurnOff" -> {
+                status = false
+                minPower = 0
+                maxPower = 0
+            }
+
             "ChangeLuminance" -> luminance = para
         }
     }

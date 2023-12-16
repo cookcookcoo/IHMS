@@ -7,14 +7,15 @@ class Curtain(
     deviceID: Int,
     name: String,
     imageID: Int = R.drawable.device_curtain,
-    type:String = "Curtain",
+    type: String = "Curtain",
 ) : Device(deviceID, name, imageID, type) {
 
-    var openingRate:Int = 0
+    var openingRate: Int = 0
 
-    override fun changeOperation(operation: String, para:Int) {
-        super.changeOperation(operation,para)
+    override fun changeOperation(operation: String, para: Int) {
         when (operation) {
+            "TurnOn" -> status = true
+            "TurnOff" -> status = false
             "ChangeOpeningRate" -> openingRate = para
         }
     }
