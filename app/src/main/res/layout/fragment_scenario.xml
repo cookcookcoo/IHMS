@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EAEAEA"
+    android:background="@drawable/scene_background"
     tools:context=".Scenario">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/scene_background"
-        android:scaleType="centerCrop" />
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/scene_background"-->
+<!--        android:scaleType="centerCrop" />-->
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
