@@ -1,16 +1,13 @@
 package com.example.store
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.store.controlcenter.Rule
 import com.example.store.controlcenter.sampleCC
-import com.example.store.device.Light
 
 class SceneDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

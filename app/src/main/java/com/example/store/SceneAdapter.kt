@@ -8,7 +8,6 @@ import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.store.controlcenter.Operation
 import com.example.store.controlcenter.Rule
 
 class SceneAdapter(private val sceneList: ArrayList<Rule>) :

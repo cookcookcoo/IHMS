@@ -1,11 +1,6 @@
 package com.example.store.device
 
-import android.util.Log
 import com.example.store.R
-import com.example.store.controlcenter.Operation
-import java.util.Date
-import java.util.Timer
-import java.util.TimerTask
 
 class Light(
     deviceID: Int,

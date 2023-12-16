@@ -1,7 +1,6 @@
 package com.example.store.device
 
 import com.example.store.R
-import com.example.store.controlcenter.Operation
 
 class AirConditioner(
     deviceID: Int,

@@ -12,7 +12,6 @@ import androidx.appcompat.widget.Toolbar
 import com.example.store.R
 import com.example.store.controlcenter.Operation
 import com.example.store.controlcenter.sampleCC
-import com.example.store.device.AirConditioner
 import com.example.store.device.AvailableOperation
 import com.example.store.device.Television
 import com.google.android.material.appbar.CollapsingToolbarLayout
