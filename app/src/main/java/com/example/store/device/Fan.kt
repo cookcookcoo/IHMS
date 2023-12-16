@@ -1,7 +1,6 @@
 package com.example.store.device
 
 import com.example.store.R
-import com.example.store.controlcenter.Operation
 
 class Fan(
     deviceID: Int,
@@ -17,7 +16,7 @@ class Fan(
         availableOperations.apply {
             add(AvailableOperation("Rotate", listOf(0)))
             add(AvailableOperation("Stop", listOf(0)))
-            add(AvailableOperation("ChangeWindSpeed", listOf(1,2,3,4,5)))
+            add(AvailableOperation("ChangeWindSpeed", listOf(0, 1, 2, 3, 4, 5)))
         }
     }
 

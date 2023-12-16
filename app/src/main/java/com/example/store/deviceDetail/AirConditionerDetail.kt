@@ -14,11 +14,15 @@ import com.example.store.controlcenter.Operation
 import com.example.store.controlcenter.sampleCC
 import com.example.store.device.AirConditioner
 import com.example.store.device.AvailableOperation
+import com.google.android.material.appbar.CollapsingToolbarLayout
 
 class AirConditionerDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_air_conditioner_detail)
+
+        val layout: CollapsingToolbarLayout = findViewById(R.id.acDetailLayout)
+
 
         val lightID = intent.getSerializableExtra("deviceID") as Int
         val airConditioner = sampleCC.getDevice(lightID) as AirConditioner
@@ -29,6 +33,8 @@ class AirConditionerDetail : AppCompatActivity() {
         val changeRotate: Switch = findViewById(R.id.acChangeRotate)
         val windSpeed: SeekBar = findViewById(R.id.acChangeWindSpeed)
 
+
+        layout.title = airConditioner.name
         switch.isChecked = airConditioner.status
         tempText.text = airConditioner.temperature.toString() + "°C"
         changeRotate.isChecked = (airConditioner.fanRotate == 1)

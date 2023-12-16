@@ -11,11 +11,15 @@ import com.example.store.R
 import com.example.store.controlcenter.Operation
 import com.example.store.controlcenter.sampleCC
 import com.example.store.device.Curtain
+import com.google.android.material.appbar.CollapsingToolbarLayout
 
 class CurtainDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_curtain_detail)
+
+        val layout: CollapsingToolbarLayout = findViewById(R.id.curtainDetailLayout)
+
 
         val curtainID = intent.getSerializableExtra("deviceID") as Int
         val curtain = sampleCC.getDevice(curtainID) as Curtain
@@ -33,6 +37,7 @@ class CurtainDetail : AppCompatActivity() {
             add(findViewById(R.id.curtainOp6))
         }
 
+        layout.title = curtain.name
         switch.isChecked = curtain.status
         opGroup[curtain.openingRate].isChecked = true
 

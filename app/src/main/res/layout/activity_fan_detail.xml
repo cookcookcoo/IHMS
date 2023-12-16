@@ -15,7 +15,7 @@
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/LightDetailLayout"
+            android:id="@+id/fanDetailLayout"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
@@ -89,7 +89,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Switch
-                        android:id="@+id/lightDetailSwitch"
+                        android:id="@+id/fanDetailSwitch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -132,7 +132,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Switch
-                        android:id="@+id/Switch"
+                        android:id="@+id/fanAuto"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -160,7 +160,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/windSpeed"
+                        android:id="@+id/fanDetailTextWind"
                         android:text="Wind Speed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -173,12 +173,11 @@
                         app:layout_constraintVertical_bias="0.466" />
 
                     <SeekBar
-                        android:id="@+id/volumeAdjust"
+                        android:id="@+id/fanWindSpeed"
                         android:layout_width="218dp"
                         android:layout_height="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/volume"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
