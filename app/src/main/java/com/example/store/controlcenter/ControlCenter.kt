@@ -92,7 +92,7 @@ class ControlCenter(
         for (device in deviceList) {
             powerConsumptionSum += device.currentPower
         }
-        Log.d("CC", "The total power is $powerConsumptionSum")
+//        Log.d("CC", "The total power is $powerConsumptionSum")
         return powerConsumptionSum
     }
 
