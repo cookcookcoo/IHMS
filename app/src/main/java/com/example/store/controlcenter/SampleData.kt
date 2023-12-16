@@ -32,44 +32,44 @@ val sampleCC = ControlCenter(sampleUser, sampleDeviceList, sampleRuleList)
 fun initDevice(deviceList: ArrayList<Device>) {
     deviceList.apply {
         add(light1)
-        add(light2)
+//        add(light2)
         add(airConditioner)
         add(fridge)
-        add(television)
-        add(curtain)
-        add(fan)
+//        add(television)
+//        add(curtain)
+//        add(fan)
     }
 }
 
 fun initOperation(operationList: ArrayList<Operation>) {
     operationList.add(Operation(light1, "TurnOn", 0))
-    operationList.add(Operation(light2, "TurnOn", 0))
+//    operationList.add(Operation(light2, "TurnOn", 0))
     operationList.add(Operation(airConditioner, "TurnOn", 0))
     operationList.add(Operation(airConditioner, "ChangeTemp", 22))
-    operationList.add(Operation(television, "ChangeChannel", 32))
+//    operationList.add(Operation(television, "ChangeChannel", 32))
 }
 
 fun initOperation2(operationList: ArrayList<Operation>) {
     operationList.apply {
         add((Operation(light1, "TurnOn", 0)))
-        add((Operation(light2, "TurnOn", 0)))
+//        add((Operation(light2, "TurnOn", 0)))
         add((Operation(airConditioner, "TurnOn", 0)))
         add((Operation(fridge, "TurnOn", 0)))
-        add((Operation(television, "TurnOn", 0)))
-        add((Operation(curtain, "TurnOn", 0)))
-        add((Operation(fan, "TurnOn", 0)))
+//        add((Operation(television, "TurnOn", 0)))
+//        add((Operation(curtain, "TurnOn", 0)))
+//        add((Operation(fan, "TurnOn", 0)))
     }
 }
 
 fun initOperation3(operationList: ArrayList<Operation>) {
     operationList.apply {
         add((Operation(light1, "TurnOff", 0)))
-        add((Operation(light2, "TurnOff", 0)))
+//        add((Operation(light2, "TurnOff", 0)))
         add((Operation(airConditioner, "TurnOff", 0)))
         add((Operation(fridge, "TurnOff", 0)))
-        add((Operation(television, "TurnOff", 0)))
-        add((Operation(curtain, "TurnOff", 0)))
-        add((Operation(fan, "TurnOff", 0)))
+//        add((Operation(television, "TurnOff", 0)))
+//        add((Operation(curtain, "TurnOff", 0)))
+//        add((Operation(fan, "TurnOff", 0)))
     }
 }
 

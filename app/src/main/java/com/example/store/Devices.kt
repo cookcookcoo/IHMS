@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.store.controlcenter.sampleCC
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -82,6 +83,12 @@ class Devices : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val numOfDevice = view?.findViewById<TextView>(R.id.NumOfDevices)
+        numOfDevice?.text = "${sampleCC.deviceList.size} devices"
     }
 
 }
