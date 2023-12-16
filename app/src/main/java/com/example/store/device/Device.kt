@@ -17,8 +17,8 @@ open class Device(
 
     var status: Boolean = false
     var availableOperations = mutableListOf<AvailableOperation>(
-        AvailableOperation("TurnOn", listOf("0")),
-        AvailableOperation("TurnOff", listOf("0"))
+        AvailableOperation("TurnOn", listOf(0)),
+        AvailableOperation("TurnOff", listOf(0))
     )
 
     var currentPower = 0

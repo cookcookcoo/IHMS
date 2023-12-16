@@ -13,6 +13,13 @@ class Television(
     var channel: Int = 1
     var volume: Int = 0
 
+    init {
+        availableOperations.apply {
+            add(AvailableOperation("ChangeChannel", listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)))
+            add(AvailableOperation("ChangeVolume", listOf(1, 2, 3, 4, 5)))
+        }
+    }
+
 
     override fun changeOperation(operation: String, para: Int) {
         when (operation) {

@@ -19,7 +19,7 @@ class Light(
 
     init {
         availableOperations.add(
-            AvailableOperation("ChangeLuminance", listOf("1", "2", "3", "4", "5"))
+            AvailableOperation("ChangeLuminance", listOf(1, 2, 3, 4, 5))
         )
     }
 

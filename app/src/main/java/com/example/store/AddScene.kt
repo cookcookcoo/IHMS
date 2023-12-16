@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.store.controlcenter.Operation
 import com.example.store.controlcenter.sampleCC
+import com.example.store.device.AvailableOperation
 import com.example.store.device.Device
 import com.google.android.material.textfield.TextInputEditText
 
@@ -30,6 +31,7 @@ class AddScene : AppCompatActivity() {
         val addScene = findViewById<Button>(R.id.addScene)
         val confirmScene = findViewById<Button>(R.id.confirmScene)
         val newSceneName = findViewById<TextInputEditText>(R.id.newSceneName)
+
 
         addScene.setOnClickListener {
             showDeviceSelectionDialog()
@@ -78,11 +80,20 @@ class AddScene : AppCompatActivity() {
         builder.setTitle("Select an Operation")
         builder.setItems(operationNames.toTypedArray()) { dialog, which ->
             val selectedOperation = device.availableOperations[which] // 获取用户选择的操作实例
-            // 这里可以根据选择的操作展示参数选择对话框，处理参数选择逻辑
-            // ...
+            showParameterSelectionDialog(device,selectedOperation)
+        }
+        builder.show()
+    }
 
-            val newOperation = Operation(device, selectedOperation.name, 0)
-            operationList.add(newOperation) // 将选择结果添加到 OperationList 中
+    private fun showParameterSelectionDialog(device:Device, selectedOperation: AvailableOperation) {
+        val paras = selectedOperation.parameters.map { it.toString() } // 获取设备支持的操作名称列表
+
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Select an Parameter")
+        builder.setItems(paras.toTypedArray()) { dialog, which ->
+            val selectedPara = paras[which]
+            val newOperation = Operation(device, selectedOperation.name, selectedPara.toInt())
+            operationList.add(newOperation)
             adapter.notifyDataSetChanged()
         }
         builder.show()

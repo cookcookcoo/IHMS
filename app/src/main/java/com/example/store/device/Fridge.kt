@@ -13,6 +13,13 @@ class Fridge(
     var upperTemperature: Int = 0
     var lowerTemperature: Int = 0
 
+    init {
+        availableOperations.apply {
+            add(AvailableOperation("ChangeUpperTemp", listOf(-5, -4, -3, -2, -1, 0)))
+            add(AvailableOperation("ChangeLowerTemp", listOf(0, 1, 2, 3, 4, 5)))
+        }
+    }
+
 
     override fun changeOperation(operation: String, para: Int) {
         when (operation) {
