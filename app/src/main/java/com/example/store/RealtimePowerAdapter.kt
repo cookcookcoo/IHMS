@@ -32,11 +32,9 @@ class RealtimePowerAdapter(private val deviceList: ArrayList<Device>) :
 
 
     inner class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val deviceImage: ImageView = itemView.findViewById(R.id.powerItemImage)
         private val powerDetail: TextView = itemView.findViewById(R.id.powerItemText)
         fun bind(device: Device) {
-            deviceImage.setImageResource(device.imageID)
-            powerDetail.text = "${device.name}: ${device.currentPower}"
+            powerDetail.text = "${device.name}: ${device.currentPower}w"
         }
     }
 

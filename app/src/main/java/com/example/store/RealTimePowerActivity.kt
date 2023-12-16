@@ -48,18 +48,13 @@ class RealTimePowerActivity : AppCompatActivity() {
                     val powerConsumption = sampleCC.getPowerConsumption().toFloat()
                     val processedData = (powerConsumption * scaleFactor).coerceIn(minValue, maxValue).toFloat()
                     realtimeLineChart.addDataPoint(processedData)
-                    text.text = "total power consumption：" + sampleCC.getPowerConsumption().toString()
+                    text.text = "total power consumption：" + sampleCC.getPowerConsumption().toString() + "w"
                     sortedDeviceList = ArrayList(deviceList.sortedByDescending { it.currentPower })
                     adapter.notifyDataSetChanged()
                 }
             }
         }, 0, 1000) // 每秒添加一个数据点
-        Timer().schedule(object: TimerTask(){
-            override fun run() {
-                runOnUiThread{
-                }
-            }
-        }, Date(), 3000)
+
         //返回键
         val backButton = findViewById<ImageView>(R.id.imageView9)
         backButton.setOnClickListener {

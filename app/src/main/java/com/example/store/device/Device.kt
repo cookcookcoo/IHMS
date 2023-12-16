@@ -32,7 +32,7 @@ open class Device(
                 currentPower = random.nextInt(maxPower - minPower + 1) + minPower
 //                Log.d("Device", "$deviceID $name Power Changed, now is $currentPower .")
             }
-        }, Date(), 3000)
+        }, Date(), 1000)
     }
 
 

@@ -13,6 +13,7 @@ import com.example.store.controlcenter.Operation
 import com.example.store.controlcenter.sampleCC
 import com.example.store.device.Light
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.squareup.picasso.Picasso
 
 class LightDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,7 @@ class LightDetail : AppCompatActivity() {
         val lightID = intent.getSerializableExtra("deviceID") as Int
         val light = sampleCC.getDevice(lightID) as Light
 
-        val image:ImageView = findViewById(R.id.LightDetailImage)
+        val imageView:ImageView = findViewById(R.id.LightDetailImage)
         val layout:CollapsingToolbarLayout = findViewById(R.id.LightDetailLayout)
         val image2:ImageView = findViewById(R.id.imageView4)
         val image3:ImageView = findViewById(R.id.imageView5)
@@ -37,7 +38,11 @@ class LightDetail : AppCompatActivity() {
             append(light.currentPower)
         }
 
-        image.setImageResource(R.drawable.devices_background)
+//        val imageResourceId = R.drawable.background_light
+//        Picasso.get().load(imageResourceId).into(imageView)
+
+
+
         layout.title = light.name
 
 
