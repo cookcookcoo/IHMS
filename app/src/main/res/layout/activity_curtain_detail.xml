@@ -89,7 +89,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Switch
-                        android:id="@+id/lightDetailSwitch"
+                        android:id="@+id/curtainDetailSwitch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -127,7 +127,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <RadioGroup
-                        android:id="@+id/radioGroup"
+                        android:id="@+id/curtainRadioGroup"
                         android:layout_width="351dp"
                         android:layout_height="39dp"
                         android:orientation="horizontal"
@@ -137,37 +137,37 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <RadioButton
-                            android:id="@+id/option1"
+                            android:id="@+id/curtainOp1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0%" />
 
                         <RadioButton
-                            android:id="@+id/option2"
+                            android:id="@+id/curtainOp2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="20%" />
 
                         <RadioButton
-                            android:id="@+id/option3"
+                            android:id="@+id/curtainOp3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="40%" />
 
                         <RadioButton
-                            android:id="@+id/option4"
+                            android:id="@+id/curtainOp4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="60%" />
 
                         <RadioButton
-                            android:id="@+id/option5"
+                            android:id="@+id/curtainOp5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="80%" />
 
                         <RadioButton
-                            android:id="@+id/option6"
+                            android:id="@+id/curtainOp6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="100%" />

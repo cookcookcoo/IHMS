@@ -1,19 +1,17 @@
 package com.example.store.deviceDetail
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.Switch
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.store.R
 import com.example.store.controlcenter.Operation
 import com.example.store.controlcenter.sampleCC
 import com.example.store.device.Light
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.squareup.picasso.Picasso
 
 class LightDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

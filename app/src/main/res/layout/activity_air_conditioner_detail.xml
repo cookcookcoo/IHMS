@@ -89,7 +89,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Switch
-                        android:id="@+id/lightDetailSwitch"
+                        android:id="@+id/acDetailSwitch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -131,7 +131,7 @@
                         app:layout_constraintVertical_bias="0.508" />
 
                     <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/acChangeTemp"
                         android:layout_width="64dp"
                         android:layout_height="42dp"
                         android:layout_marginEnd="36dp"
@@ -144,13 +144,13 @@
                         app:layout_constraintVertical_bias="0.578" />
 
                     <TextView
-                        android:id="@+id/textView23"
+                        android:id="@+id/acTemp"
                         android:layout_width="17dp"
                         android:layout_height="23dp"
                         android:layout_marginEnd="92dp"
                         android:text="°C"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/button5"
+                        app:layout_constraintEnd_toEndOf="@+id/acChangeTemp"
                         app:layout_constraintHorizontal_bias="0.773"
                         app:layout_constraintStart_toEndOf="@+id/textView21"
                         app:layout_constraintTop_toTopOf="parent"
@@ -188,7 +188,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Switch
-                        android:id="@+id/Switch"
+                        android:id="@+id/acChangeRotate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -231,7 +231,7 @@
                         app:layout_constraintVertical_bias="0.466" />
 
                     <SeekBar
-                        android:id="@+id/volumeAdjust"
+                        android:id="@+id/acChangeWindSpeed"
                         android:layout_width="218dp"
                         android:layout_height="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"

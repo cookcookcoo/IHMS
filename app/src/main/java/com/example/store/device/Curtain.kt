@@ -1,7 +1,6 @@
 package com.example.store.device
 
 import com.example.store.R
-import com.example.store.controlcenter.Operation
 
 class Curtain(
     deviceID: Int,
@@ -14,7 +13,7 @@ class Curtain(
 
     init {
         availableOperations.apply {
-            add(AvailableOperation("ChangeOpeningRate", listOf(1, 2, 3, 4, 5)))
+            add(AvailableOperation("ChangeOpeningRate", listOf(0, 1, 2, 3, 4, 5)))
         }
     }
 
