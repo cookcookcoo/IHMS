@@ -5,7 +5,7 @@ import com.example.store.R
 class Fan(
     deviceID: Int,
     name: String,
-    imageID: Int = R.drawable.device_camera,
+    imageID: Int = R.drawable.device_fan,
     type: String = "Fan",
 ) : Device(deviceID, name, imageID, type) {
 

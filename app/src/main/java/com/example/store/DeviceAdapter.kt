@@ -58,6 +58,8 @@ class DeviceAdapter(private val deviceList: ArrayList<Device>) :
             deviceImage.setImageResource(device.imageID)
             deviceSwitch.isChecked = device.status
 
+            itemView.alpha=0.7f
+
             deviceSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
                 if (isChecked) {
                     Operation(device, "TurnOn", 0).run()

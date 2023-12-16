@@ -6,7 +6,7 @@ import com.example.store.controlcenter.Operation
 class Fridge(
     deviceID: Int,
     name: String,
-    imageID: Int = R.drawable.device_bedroomlight,
+    imageID: Int = R.drawable.device_fridge,
     type: String = "Fridge"
 ) : Device(deviceID, name, imageID, type) {
 
