@@ -24,16 +24,12 @@ class Mine : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_mine, container, false)
-        //我的详情
-        val CardView1 = rootView.findViewById<ImageView>(R.id.imageView3)
-        CardView1.setOnClickListener{
-            // 创建一个Intent并指定目标Activity
-            val intent = Intent(activity, MyDetailsActivity::class.java)
-            // 启动目标Activity
-            startActivity(intent)
-        }
+
+        val avator = rootView.findViewById<ImageView>(R.id.imageView3)
+        avator.alpha = 0.7f
         //实时功率图
         val CardView2 = rootView.findViewById<CardView>(R.id.RealTimePowerActivity)
+        CardView2.alpha = 0.7f
         CardView2.setOnClickListener{
             // 创建一个Intent并指定目标Activity
             val intent = Intent(activity, RealTimePowerActivity::class.java)
@@ -42,6 +38,7 @@ class Mine : Fragment() {
         }
         //用电建议
         val CardView3 = rootView.findViewById<CardView>(R.id.PowerAdviceActivity)
+        CardView3.alpha = 0.7f
         CardView3.setOnClickListener{
             // 创建一个Intent并指定目标Activity
             val intent = Intent(activity, PowerAdviceActivity::class.java)
@@ -50,6 +47,7 @@ class Mine : Fragment() {
         }
         //健康咨询
         val CardView4 = rootView.findViewById<CardView>(R.id.HealthConsultationActivity)
+        CardView4.alpha = 0.7f
         CardView4.setOnClickListener{
             // 创建一个Intent并指定目标Activity
             val intent = Intent(activity, HealthConsultationActivity::class.java)
@@ -58,6 +56,7 @@ class Mine : Fragment() {
         }
         //论坛
         val CardView5 = rootView.findViewById<CardView>(R.id.ForumActivity)
+        CardView5.alpha = 0.7f
         CardView5.setOnClickListener{
             // 创建一个Intent并指定目标Activity
             val intent = Intent(activity, ForumActivity::class.java)
