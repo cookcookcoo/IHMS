@@ -14,7 +14,7 @@ fun chat(chatContent:String, callback:(String)->Unit){
 
     var answer = ""
 
-    val apiKey = "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"
+    val apiKey = "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"
 
     val url = "https://api.openai.com/v1/engines/text-davinci-003/completions"
     val client = OkHttpClient()

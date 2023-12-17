@@ -6,11 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".HealthConsultationActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="39dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/zuojiantou" />
+
     <Button
         android:id="@+id/refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginTop="384dp"
+        android:text="Refresh"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,17 +33,25 @@
         android:id="@+id/healthTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hera are some advice:"
+        android:layout_marginTop="36dp"
+        android:text="Get some fresh healthy advice"
+        android:textColor="@color/black"
+        android:textSize="27dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/refresh" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/healthAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/healthTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

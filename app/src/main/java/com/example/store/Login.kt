@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.store.controlcenter.userList
 import com.google.android.material.textfield.TextInputEditText
 
 class LoginActivity : AppCompatActivity() {
@@ -35,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         val username = etUsername.text.toString()
         val password = etPassword.text.toString()
 
-        if (isValidCredentials(username, password)) {
+        if (checkPwd(username, password)) {
             // 如果用户名和密码符合条件，跳转到MainActivity
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -52,5 +53,14 @@ class LoginActivity : AppCompatActivity() {
     private fun isValidCredentials(username: String, password: String): Boolean {
         // 在实际应用中，你可能需要更复杂的条件来验证用户名和密码
         return username.isNotEmpty() && password.isNotEmpty()
+    }
+
+    fun checkPwd(username: String, password: String):Boolean {
+        for ((key, value) in userList) {
+            if (username == key && password == value) {
+                return true
+            }
+        }
+        return false
     }
 }
